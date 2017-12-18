@@ -10,38 +10,73 @@ body {
     cursor: url(https://i.imgur.com/ddwUwZO.png), auto;
 }
 
+div {
+    display:block;
+}
+
+#intro {
+    #display: block;
+    #vertical-align: top;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width:100vw;
+    height: 100vh;
+    #background-color: white;
+
+}
+
+#intro-button>#play {
+    position: fixed;
+    bottom: 50%;
+    left: 42%;
+    z-index: 1000;
+    font-size: 75px;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
+    color: rgba(255,255,255,1);
+    text-decoration: normal;
+    text-align: center;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    white-space: pre;
+    text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(73,61,61,1) , 0 0 40px #000000 , 0 0 70px #2d242c , 0 0 80px #050404 , 0 0 100px #070707 ;
+    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+#intro-button>#play:hover {
+    text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #04010f , 0 0 70px #000000 , 0 0 80px #032296 , 0 0 100px #51adad ;
+}
+
 .header-container {
     #background-color: midnightblue;
     position: relative;
     width: 40%;
     height: 25vh;
     display: table;
+    max-width:40%;
+    overflow: hidden;
 }
-
-#content-links{
-    width: 35%;
-    left: 38%;
-    top: 63%;
-    position: absolute;
-}
-
-#content-links ul li{
-    list-style-type: none;
-    display: inline-block;
-}
-
-#content-links a:link, a:visited{
-    text-decoration: none;
-    color: #fffeed;
-}
-
 
 #game-logo img{
     width: 400px;
     height: 200px;
-    position: fixed;
+    position: relative;
     left: 150px;
+    max-width: 60%;
 }
+
+/*stats*/
 
 .stats {
     #background-color: midnightblue;
@@ -54,46 +89,269 @@ body {
 }
 
 
+/*#content-links{*/
+/*width: 35%;*/
+/*left: 38%;*/
+/*top: 69%;*/
+/*max-width: 40%;*/
+/*position: absolute;*/
+/*}*/
+
+ul{
+    padding: 0 0 0 0 ;
+}
+
+#content-links ul li{
+    list-style-type: none;
+    #display: inline;
+    padding: 0;
+}
+
+#content-links a:link, a:visited{
+    text-decoration: none;
+    color: #fffeed;
+    padding: 0;
+}
+
+
+/*game area */
 
 #game-area{
     #background-color: midnightblue;
-    width: 40%;
+    width: 45%;
     height: 40vh;
     position: absolute;
     display: inline-block;
     text-align: center;
-    right: 18%;
+    right: 10%;
     top: 10%;
 }
 
-img{
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+/*cards*/
+
+
+.card {
+    display: inline-block;
+    position: relative;
+    height: 40%;
+    width: 14.67%;
+    float: left;
+    border-radius: 25px;
+    margin: 3px;
+}
+
+.back:hover, .back:active {
+    box-shadow: 0 0 10px lightgoldenrodyellow;
+}
+
+.front,
+.back {
+    position: absolute;
+    margin: 0 auto;
+}
+
+.front {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+.back {
+    #background-image: url(https://i.imgur.com/ut0pYpZ.png);
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+.back img {
     width: 100%;
     height:100%;
     border-radius: 25px;
 
 }
 
-/*#front #back {*/
-/*width: 100%;*/
-/*height: 100%;*/
-/*position: absolute;*/
-/*top: 0;*/
-/*left: 0;}*/
-
-#front img {
+img {
+    width: 100%;
+    height:100%;
+    border-radius: 25px;
 
 }
 
-.card {
-    display: inline-block;
+/*.rotate{*/
+    /*-webkit-transform: rotate3D(0, 1, 0, 180deg);*/
+    /*-moz-transform: rotate3D(0, 1, 0, 180deg);*/
+    /*-ms-transform: rotate3D(0, 1, 0, 180deg);*/
+    /*-o-transform: rotate3D(0, 1, 0, 180deg);*/
+    /*transform: rotate3D(0, 1, 0, 180deg);}*/
+/*}*/
+
+
+
+button {
+    background-color: transparent;
+    color: white;
+    outline: 0;
+    font-family: 'HankenBook';
+    font-size: 20px;
+    border: none;
+}
+
+/*winner winner chicken dinner*/
+
+#you-won{
+    margin: auto;
+    margin-top:300px;
+    text-align: center;
+    display: none;
+    color: white;
+    bottom: 67%;
     position: relative;
-    max-width: 15%;
-    padding: 5px;
+    font-size: 80px;
+    text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #04010f , 0 0 70px #000000 , 0 0 80px #032296 , 0 0 100px #51adad ;
+}
 
+#you-won img{
+    width: 30%;
+    height: 30%;
+}
+
+#you-lose {
+    display: none;
+    width: 40%;
+    height: 74%;
+    position: absolute;
+    left: 61%;
+    bottom: 8%;
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
+
+/*about page*/
+
+#about-body{
+    background: url("https://i.imgur.com/xumHAbS.gif");
+    width: 100vw;
+    height: 100vw;
+}
+
+#about-div img {
+    width: 10px;
+    height: 10px;
+}
+
+#about-pic {
+    width: 10%;
+    height: 10%;
+}
+#about-div {
+    font-size: 50px;
+    color: white;
+}
+
+.about-container {
+    text-align: center;
+    margin: auto;
 }
 
 
 
-div {
-    display: block;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.vanishOut {*/
+    /*animation-name: vanishOut;*/
+/*}*/
+/*@keyframes vanishOut {*/
+    /*0% {*/
+        /*opacity: 1;*/
+        /*transform-origin: 50% 50%;*/
+        /*transform: scale(1, 1);*/
+        /*filter: blur(0px);*/
+    /*}*/
+
+    /*100% {*/
+        /*opacity: 0;*/
+        /*transform-origin: 50% 50%;*/
+        /*transform: scale(2, 2);*/
+        /*filter: blur(20px);*/
+    /*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.back {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+/*}*/
+
+/*.front .lars {*/
+    /*background-position: 30% 0%;*/
+    /*background-size: 95%;*/
+/*}*/
+
+
+/*.front {*/
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*background-repeat: no-repeat;*/
+/*}*/
+
+/*.back{*/
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+/*}*/
+
+/*.card {*/
+    /*display: inline-block;*/
+    /*position: relative;*/
+    /*max-width: 15%;*/
+    /*#padding: 4px;*/
+    /*height: 33%;*/
+    /*width: 16.67%;*/
+/*}*/
+
+
+/*div {*/
+    /*display: block;*/
+/*}*/

@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Memory Match v.01</title>
+    <title>Memory Match v.1</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/hanken" type="text/css"/>
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="main.js"></script>
 </head>
 <body>
+<!---intro--->
+<div id ="intro">
+    <img src="https://i.imgur.com/xumHAbS.gif" alt="game-intro" id="intropic">
+    <div id="intro-button"><button id="play">START<br>GAME</button></div>
+</div>
 <!--- header --->
     <div class="header-container">
         <div id="game-logo">
             <img src="https://pre00.deviantart.net/51d9/th/pre/f/2015/359/4/2/logo_by_maxigamer-d9lhjkk.png">
-        </div>
-        <div id="content-links">
-            <ul>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
         </div>
     </div>
 <!--- stats --->
@@ -26,94 +27,43 @@
         <h1> Stats </h1>
         <div id="games-played">
             <p class="label">Games Played:</p>
-            <p class="value">0</p>
+            <p class="games-value">0</p>
         </div>
-        <div id="attempts>
-             <p class="label">Attempts:</p>
-             <p class="value">0</p>
+        <div id="attempts">
+             <p class="label">Attempts</p>
+             <p class="attempts-value">0</p>
         </div>
         <div id="Accuracy">
             <p class="label">Accuracy:</p>
-            <p class="value">0</p>
+            <p class="accuracy-value">0</p>
         </div>
         <button class="reset">Reset</button>
-    </div>
-<!--- game area --->
-<div id="game-area">
-    <div class="card">
-       <!--- <div id="front"><img src="http://c-8oqtgrjgwu46x24x78kipgvvgx2eykmkcx2epqeqqmkgx2epgv.g00.wikia.com/g00/3_c-8uvgx78gp-wpkx78gtug.ykmkc.eqo_/c-8OQTGRJGWU46x24jvvrux3ax2fx2fx78kipgvvg.ykmkc.pqeqqmkg.pgvx2fuvgx78gp-wpkx78gtugx2fkocigux2fhx2fh2x2fUvgx78gp_Ujkgnf_YF.rpix2ftgx78kukqpx2fncvguvx2fuecng-vq-ykfvj-fqypx2f572x3fedx3d42382628332853x26k32e.octm.kocig.varg_$/$/$/$/$/$/$/$/$/$" alt="steven"></div> -->
-         <div id="back"><img src="https://i.imgur.com/ut0pYpZ.png"></div>
-    </div>
-    <div class="card">
-        <!--<div id="front"><img src="http://c-8oqtgrjgwu46x24x78kipgvvgx2eykmkcx2epqeqqmkgx2epgv.g00.wikia.com/g00/3_c-8uvgx78gp-wpkx78gtug.ykmkc.eqo_/c-8OQTGRJGWU46x24jvvrux3ax2fx2fx78kipgvvg.ykmkc.pqeqqmkg.pgvx2fuvgx78gp-wpkx78gtugx2fkocigux2f0x2f0ex2fEwttgpv_Rgctn_Tgswguv.rpix2ftgx78kukqpx2fncvguvx2fuecng-vq-ykfvj-fqypx2f527x3fedx3d42392029222275x26k32e.octm.kocig.varg_$/$/$/$/$/$/$/$/$/$" alt ='pearl'></div>&ndash;&gt;-->
-        <div id="back"><img src="https://i.imgur.com/ut0pYpZ.png"></div>
-    </div>
-    <div class="card">
-        <!--<div id="front"><img src="http://c-8oqtgrjgwu46x24x78kipgvvgx2eykmkcx2epqeqqmkgx2epgv.g00.wikia.com/g00/3_c-8uvgx78gp-wpkx78gtug.ykmkc.eqo_/c-8OQTGRJGWU46x24jvvrux3ax2fx2fx78kipgvvg.ykmkc.pqeqqmkg.pgvx2fuvgx78gp-wpkx78gtugx2fkocigux2ffx2ff4x2fIctpgvDaMoguNgpjk.rpix2ftgx78kukqpx2fncvguvx3fedx3d42382345202865_$/$/$/$/$/$/$/$?i10c.ua=1" alt="garnet"></div>&ndash;&gt;-->
-        <div id="back"><img src="https://i.imgur.com/ut0pYpZ.png"></div>
-    </div>
-    <div class="card">
-        <!--<div id="front"><img src="http://c-8oqtgrjgwu46x24x78kipgvvgx2eykmkcx2epqeqqmkgx2epgv.g00.wikia.com/g00/3_c-8uvgx78gp-wpkx78gtug.ykmkc.eqo_/c-8OQTGRJGWU46x24jvvrux3ax2fx2fx78kipgvvg.ykmkc.pqeqqmkg.pgvx2fuvgx78gp-wpkx78gtugx2fkocigux2f9x2f92x2fLhgm.rpix2ftgx78kukqpx2fncvguvx2fuecng-vq-ykfvj-fqypx2f572x3fedx3d42373352433564x26k32e.octm.kocig.varg_$/$/$/$/$/$/$/$/$/$" alt="amethyst"></div>&ndash;&gt;-->
-        <div id="back"><img src="https://i.imgur.com/ut0pYpZ.png"></div>
-    </div>
-    <div class="card">
-        <!--<div id="front"><img src="http://c-8oqtgrjgwu46x24x78kipgvvgx2eykmkcx2epqeqqmkgx2epgv.g00.wikia.com/g00/3_c-8uvgx78gp-wpkx78gtug.ykmkc.eqo_/c-8OQTGRJGWU46x24jvvrux3ax2fx2fx78kipgvvg.ykmkc.pqeqqmkg.pgvx2fuvgx78gp-wpkx78gtugx2fkocigux2f3x2f34x2fEqppkgPgyKpvtq.rpix2ftgx78kukqpx2fncvguvx2fuecng-vq-ykfvj-fqypx2f572x3fedx3d42382142367171x26k32e.octm.kocig.varg_$/$/$/$/$/$/$/$/$/$" alt="connie"></div>&ndash;&gt;-->
-        <div id="back"><img src="https://i.imgur.com/ut0pYpZ.png"></div>
-    </div>
-    <div class="card">
-        <!--<div id="front"><img src="http://c-8oqtgrjgwu46x24x78kipgvvgx2eykmkcx2epqeqqmkgx2epgv.g00.wikia.com/g00/3_c-8uvgx78gp-wpkx78gtug.ykmkc.eqo_/c-8OQTGRJGWU46x24jvvrux3ax2fx2fx78kipgvvg.ykmkc.pqeqqmkg.pgvx2fuvgx78gp-wpkx78gtugx2fkocigux2fhx2fhcx2fTqug_Swctvb_-_Ykvj_Ygcrqp.rpix2ftgx78kukqpx2fncvguvx2fuecng-vq-ykfvj-fqypx2f572x3fedx3d42372921252658x26k32e.octm.kocig.varg_$/$/$/$/$/$/$/$/$/$" alt="rose-quartz"></div>&ndash;&gt;-->
-        <div id="back"><img src="https://i.imgur.com/ut0pYpZ.png"></div>
-    </div>
-    <div class="card">
-        <!--<div id="front"><img src="http://c-8oqtgrjgwu46x24x78kipgvvgx2eykmkcx2epqeqqmkgx2epgv.g00.wikia.com/g00/3_c-8uvgx78gp-wpkx78gtug.ykmkc.eqo_/c-8OQTGRJGWU46x24jvvrux3ax2fx2fx78kipgvvg.ykmkc.pqeqqmkg.pgvx2fuvgx78gp-wpkx78gtugx2fkocigux2f2x2f27x2fAqwpigt_Itgi.rpix2ftgx78kukqpx2fncvguvx2fuecng-vq-ykfvj-fqypx2f561x3fedx3d42392339246522x26k32e.octm.kocig.varg_$/$/$/$/$/$/$/$/$/$" alt="greg"></div>&ndash;&gt;-->
-        <div id="back"><img src="https://i.imgur.com/ut0pYpZ.png"></div>
-    </div>
-    <div class="card">
-        <!--<div id="front"><img src="http://c-8oqtgrjgwu46x24x78kipgvvgx2eykmkcx2epqeqqmkgx2epgv.g00.wikia.com/g00/3_c-8uvgx78gp-wpkx78gtug.ykmkc.eqo_/c-8OQTGRJGWU46x24jvvrux3ax2fx2fx78kipgvvg.ykmkc.pqeqqmkg.pgvx2fuvgx78gp-wpkx78gtugx2fkocigux2fdx2fdfx2fNctu_yqtm_wpkhqto.rpix2ftgx78kukqpx2fncvguvx3fedx3d42372821392356_$/$/$/$/$/$/$/$?i10c.ua=1" alt="lars"></div>&ndash;&gt;-->
-        <div id="back"><img src="https://i.imgur.com/ut0pYpZ.png"></div>
-    </div>
-    <div class="card">
-        <!--<div id="front"><img src="http://c-8oqtgrjgwu46x24x78kipgvvgx2eykmkcx2epqeqqmkgx2epgv.g00.wikia.com/g00/3_c-8uvgx78gp-wpkx78gtug.ykmkc.eqo_/c-8OQTGRJGWU46x24jvvrux3ax2fx2fx78kipgvvg.ykmkc.pqeqqmkg.pgvx2fuvgx78gp-wpkx78gtugx2fkocigux2f2x2f25x2fUoqn_Rgtkfqv_da_Ngpjk.rpix2ftgx78kukqpx2fncvguvx3fedx3d42373445276428_$/$/$/$/$/$/$/$?i10c.ua=1" alt="peridot"></div>&ndash;&gt;-->
-        <div id="back"><img src="https://i.imgur.com/ut0pYpZ.png"></div>
-    </div>
-    <div class="card">
-        <!--<div id="front"><img src="" alt="amethyst"></div>-->
-        <div id="back"><img src="https://i.imgur.com/ut0pYpZ.png"></div>
-    </div>
-    <div class="card">
-        <!--<div id="front"><img src="" alt="amethyst"></div>-->
-        <div id="back"><img src="https://i.imgur.com/ut0pYpZ.png"></div>
-    </div>
-    <div class="card">
-        <!--<div id="front"><img src="" alt="amethyst"></div>-->
-        <div id="back"><img src="https://i.imgur.com/ut0pYpZ.png"></div>
-    </div>
-    <div class="card">
-        <!--<div id="front"><img src="" alt="amethyst"></div>-->
-        <div id="back"><img src="https://i.imgur.com/ut0pYpZ.png"></div>
-    </div>
-    <div class="card">
-        <!--<div id="front"><img src="" alt="amethyst"></div>-->
-        <div id="back"><img src="https://i.imgur.com/ut0pYpZ.png"></div>
-    </div>
-    <div class="card">
-        <!--<div id="front"><img src="" alt="amethyst"></div>-->
-        <div id="back"><img src="https://i.imgur.com/ut0pYpZ.png"></div>
-    </div>
-    <div class="card">
-        <!--<div id="front"><img src="" alt="amethyst"></div>-->
-        <div id="back"><img src="https://i.imgur.com/ut0pYpZ.png"></div>
-    </div>
-    <div class="card">
-        <!--<div id="front"><img src="" alt="amethyst"></div>-->
-        <div id="back"><img src="https://i.imgur.com/ut0pYpZ.png"></div>
-    </div>
-    <div class="card">
-        <!--<div id="front"><img src="" alt="amethyst"></div>-->
-        <div id="back"><img src="https://i.imgur.com/ut0pYpZ.png"></div>
+        <div id="content-links">
+            <ul>
+            <li><a href="#">Settings</a></li>
+            <li><a href="it_me.html">About</a></li>
+            </ul>
+        </div>
+        <div id="steven-lives">
+
+        </div>
     </div>
 
+<!--- game area --->
+<div id="game-area">
+
+</div>
+<!--- outro --->
+<div id="you-won">
+    <h1> YOU WIN! </h1>
+    <img src="https://i.pinimg.com/originals/d4/bb/a7/d4bba7b72c6f818560d53cc03bec8851.gif"></div>
+<div id="you-lose">
+    <img src="https://pa1.narvii.com/6452/5d859df297b0a8015581d707a72b3095a68257eb_hq.gif">
+    <h1> You lose. At least try to remember! </h1>
 </div>
 
 </body>
 </html>
+
+
+
