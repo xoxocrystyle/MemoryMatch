@@ -6,9 +6,11 @@ $(document).ready(function() {
         e.preventDefault();
         $("#intro").fadeOut(1000);
     });
+    $("#play").click(play);
+    $("#pause").click(pause);
 });
 
-//shuffle thou images
+//shuffle le images
 function randomCards() {
     var images = ['images/amethyst.png',
         'images/connie.png',
@@ -55,7 +57,6 @@ var games_played = 0;
 var total_possible_matches = 9;
 var attempts = 0;
 
-debugger;
 //flip thou cards
 function toggleCard (cardFlip){
     return cardFlip.find(".back").toggleClass("hidden");
@@ -101,7 +102,7 @@ function card_clicked () {
         }
     }
 
-    if (attempts === 10) {
+    if (attempts === 15) {
         $("#you-lose").show("slow").addClass('slide', 1000)
         $("#game-board").off();
     }
@@ -111,11 +112,15 @@ function card_clicked () {
 
 //add thou stats
 
+//var can i click cards
+//wherever you have 2 cards, can i click cards to false.
+
+
     //reset stats still buggy - work in progress atm
     $(".reset").on("click", function(){
         games_played++;
         reset_stats();
-        displayStats();
+       
     });
 
     displayStats();
@@ -144,10 +149,23 @@ function card_clicked () {
 
 }
 
+//audio
+var pr = new Audio("NaturalLight.mp3");
+pr.play();
+
+function play(){
+pr.play();
+}
 
 
+function pause(){
+    pr.pause();
+}
 
-
+//cheat code
+function operationCwal (){
+    $(".back").css('opacity', 0.1);
+}
 
 
 

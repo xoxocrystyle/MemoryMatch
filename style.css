@@ -15,8 +15,6 @@ div {
 }
 
 #intro {
-    #display: block;
-    #vertical-align: top;
     position: absolute;
     text-align: center;
     top: 50%;
@@ -25,7 +23,6 @@ div {
     z-index: 2;
     width:100vw;
     height: 100vh;
-    #background-color: white;
 
 }
 
@@ -266,3 +263,7 @@ button {
     margin: auto;
 }
 
+/* music */
+#music{
+    font-size: 10px;
+}
