@@ -10,17 +10,17 @@ $(document).ready(function() {
     $("#pause").click(pause);
 });
 
-//shuffle le images
+//shuffle images
 function randomCards() {
-    var images = ['images/amethyst.png',
-        'images/connie.png',
-        'images/garnet.png',
-        'images/greg.png',
-        'images/lars.png',
-        'images/pearl.png',
-        'images/peridot.png',
-        'images/steven.png',
-        'images/rosequartz.png'];
+    var images = ['../assets/images/amethyst.png',
+        '../assets/images/connie.png',
+        '../assets/images/garnet.png',
+        '../assets/images/greg.png',
+        '../assets/images/lars.png',
+        '../assets/images/pearl.png',
+        '../assets/images/peridot.png',
+        '../assets/images/steven.png',
+        '../assets/images/rosequartz.png'];
     var totalCards = 18;
 
 // makes multiple of images array
@@ -38,7 +38,7 @@ function randomCards() {
     for (var j = 0; j < totalCards; j++) {
         console.log('card' + j);
         var card_div = $('<div>').addClass('card');
-        var back_div = $('<div>').addClass('back').html('<img src="images/stevenBack.png">');
+        var back_div = $('<div>').addClass('back').html('<img src="../assets/images/stevenBack.png">');
         var front_div = $('<div>').addClass('front').html('<img src="' + random_images[j] + '"></div>');
         card_div.append(back_div);
         card_div.append(front_div);
@@ -150,7 +150,9 @@ function card_clicked () {
 }
 
 //audio
-var pr = new Audio("NaturalLight.mp3");
+
+
+var pr = new Audio("../assets/NaturalLight.mp3");
 pr.play();
 
 function play(){

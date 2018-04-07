@@ -56,7 +56,6 @@ div {
 }
 
 .header-container {
-    #background-color: midnightblue;
     position: relative;
     width: 40%;
     height: 25vh;
@@ -76,7 +75,6 @@ div {
 /*stats*/
 
 .stats {
-    #background-color: midnightblue;
     position: relative;
     display: inline-block;
     left: 10%;
@@ -85,22 +83,12 @@ div {
     color: #fffeed;
 }
 
-
-/*#content-links{*/
-/*width: 35%;*/
-/*left: 38%;*/
-/*top: 69%;*/
-/*max-width: 40%;*/
-/*position: absolute;*/
-/*}*/
-
 ul{
     padding: 0 0 0 0 ;
 }
 
 #content-links ul li{
     list-style-type: none;
-    #display: inline;
     padding: 0;
 }
 
@@ -114,7 +102,6 @@ ul{
 /*game area */
 
 #game-area{
-    #background-color: midnightblue;
     width: 45%;
     height: 40vh;
     position: absolute;
@@ -159,7 +146,6 @@ body {
 }
 
 .back {
-    #background-image: url(https://i.imgur.com/ut0pYpZ.png);
     height: 100%;
     width: 100%;
     border-radius: 25px;
@@ -185,16 +171,6 @@ img {
     border-radius: 25px;
 
 }
-
-/*.rotate{*/
-    /*-webkit-transform: rotate3D(0, 1, 0, 180deg);*/
-    /*-moz-transform: rotate3D(0, 1, 0, 180deg);*/
-    /*-ms-transform: rotate3D(0, 1, 0, 180deg);*/
-    /*-o-transform: rotate3D(0, 1, 0, 180deg);*/
-    /*transform: rotate3D(0, 1, 0, 180deg);}*/
-/*}*/
-
-
 
 button {
     background-color: transparent;
